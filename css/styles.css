@@ -1,5 +1,7 @@
 :root {
   font-size: 62.5%;
+  --color-font: white;
+  --color-header: #027864;
 }
 
 body {
@@ -12,9 +14,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-between;
   gap: 2.5rem;
+  padding: .8rem;
+  background-color: var(--color-header);
+  color: var(--color-font)
 }
 
+.cabecalho img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.menu-selecao ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.0rem;
+}
 
 section img {
   width: 500px;
