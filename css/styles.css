@@ -1,0 +1,22 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Rubik';
+}
+
+.cabecalho {
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+
+section img {
+  width: 500px;
+  height: 400px;
+}
