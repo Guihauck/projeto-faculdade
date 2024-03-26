@@ -3,6 +3,8 @@
   --color-font: white;
   --color-header: #1D3E56;
   --color-form: #115872;
+  --background-color-main: #BEE7F5;
+  --color-border-cards: #00749E;
 }
 
 body {
@@ -11,7 +13,6 @@ body {
 }
 
 .cabecalho {
-  border: 1px solid orange;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,9 +62,13 @@ body {
   gap: 2.0rem;
 }
 
-section img {
-  width: 500px;
-  height: 400px;
+.cabecalho img:hover {
+  transform: scale(0.8);
+}
+
+.cabecalho img {
+  transition-property: transform;
+  transition-duration: 1s;
 }
 
 .pagina-principal {
@@ -80,4 +85,94 @@ section img {
   align-items: center;
   gap: 1.6rem;
   padding-top: 4.0rem;
+}
+
+.galeria-serviços {
+  margin-top: 4.0rem;
+  padding: 2.0rem;
+}
+
+.galeria-serviços {
+  display: grid;
+  grid-template-columns: repeat(4, 30.0rem);
+  place-content: center;
+  gap: 3.2rem
+}
+
+.galeria-serviços img {
+  width: 30.0rem;
+  height: 20.0rem;
+}
+
+.galeria-serviços .cartao-item {
+  background-color: #115872;
+  border: 3px solid #00749E;
+  border-radius: .8rem;
+  overflow: hidden;
+  color: var(--color-font);
+}
+
+.cartao-item h2 {
+  font-size: 1.8rem;
+  margin-bottom:1.4rem 2.0rem ;
+  text-align: center;
+  padding: 1.2rem;
+  width: 30.0rem;
+}
+
+.cartao-item p {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  padding: 1.6rem;
+}
+
+.cartao-item img:hover {
+  transform: scale(1.1);
+  filter: saturate(200%) hue-rotate(-2deg);
+}
+
+.cartao-item img {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes moveHeader {
+  from {
+    transform: translateY(var(--moverY));
+  }
+}
+
+.cabecalho {
+  --moverY: -100%;
+  animation-name: moveHeader;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moverCards {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.cartao-item {
+  --delayCard: 100ms;
+  animation-name: moverCards;
+  animation-duration: 1s;
+  animation-delay: var(--delayCard);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.rodape{
+  padding: 2.0rem;
+  background-color: var(--color-header);
+  color: var(--color-font);
+  text-align: center;
 }
