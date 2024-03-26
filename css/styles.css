@@ -87,24 +87,20 @@ body {
   padding-top: 4.0rem;
 }
 
-.galeria-serviços {
-  margin-top: 4.0rem;
-  padding: 2.0rem;
-}
-
-.galeria-serviços {
+.galeria-servicos {
   display: grid;
   grid-template-columns: repeat(4, 30.0rem);
   place-content: center;
-  gap: 3.2rem
+  gap: 3.2rem;
+  margin: 4.0rem 0 4.0rem;
 }
 
-.galeria-serviços img {
+.galeria-servicos img {
   width: 30.0rem;
   height: 20.0rem;
 }
 
-.galeria-serviços .cartao-item {
+.galeria-servicos .cartao-item {
   background-color: #115872;
   border: 3px solid #00749E;
   border-radius: .8rem;
@@ -114,7 +110,7 @@ body {
 
 .cartao-item h2 {
   font-size: 1.8rem;
-  margin-bottom:1.4rem 2.0rem ;
+  margin-bottom: 1.4rem 2.0rem;
   text-align: center;
   padding: 1.2rem;
   width: 30.0rem;
@@ -156,6 +152,7 @@ body {
     opacity: 0;
     transform: scale(0.7);
   }
+
   50% {
     transform: scale(1.1);
   }
@@ -164,13 +161,13 @@ body {
 .cartao-item {
   --delayCard: 100ms;
   animation-name: moverCards;
-  animation-duration: 1s;
+  animation-duration: 200ms;
   animation-delay: var(--delayCard);
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
 
-.rodape{
+.rodape {
   padding: 2.0rem;
   background-color: var(--color-header);
   color: var(--color-font);
